@@ -14,7 +14,7 @@ A Django web application that showcases the first pages of classic books from Pr
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/first-pages.git
+git clone https://github.com/amccarroll/first-pages.git
 cd first-pages
 ```
 
