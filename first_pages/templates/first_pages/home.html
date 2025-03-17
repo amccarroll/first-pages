@@ -1,0 +1,34 @@
+{% extends 'first_pages/base.html' %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4 mb-4">First Pages</h1>
+    <div class="book-cover-container mb-4">
+        <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Book Stack -->
+            <rect x="50" y="50" width="300" height="200" fill="#2c3e50" rx="5"/>
+            <rect x="70" y="70" width="260" height="180" fill="#34495e" rx="5"/>
+            <rect x="90" y="90" width="220" height="160" fill="#2c3e50" rx="5"/>
+            <rect x="110" y="110" width="180" height="140" fill="#34495e" rx="5"/>
+            <!-- Book Titles -->
+            <text x="200" y="150" text-anchor="middle" fill="white" font-family="Georgia" font-size="24">First Pages</text>
+            <text x="200" y="180" text-anchor="middle" fill="white" font-family="Georgia" font-size="18">Discover Amazing Stories</text>
+        </svg>
+    </div>
+    <p class="lead mb-4">Discover the beginning of amazing stories</p>
+    <a href="{% url 'first_pages:random_first_page' %}" class="btn btn-primary btn-lg">Get Started</a>
+</div>
+
+<style>
+    .book-cover-container {
+        margin: 2rem auto;
+        max-width: 400px;
+    }
+    .book-cover-container svg {
+        transition: transform 0.3s ease;
+    }
+    .book-cover-container svg:hover {
+        transform: scale(1.05);
+    }
+</style>
+{% endblock %} 

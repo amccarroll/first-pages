@@ -1,0 +1,19 @@
+{% extends 'first_pages/base.html' %}
+
+{% block content %}
+{% if error %}
+    <div class="alert alert-warning">{{ error }}</div>
+{% else %}
+    <div class="book-content">
+        <h2 class="mb-4">{{ page.book_title }}</h2>
+        <h3 class="mb-3">{{ page.title }}</h3>
+        <div class="mb-4">
+            {{ page.content|linebreaks }}
+        </div>
+        <div class="d-flex justify-content-between">
+            <a href="{% url 'first_pages:additional_pages' page.book_title page.page_number %}" class="btn btn-primary">Read More</a>
+            <a href="{% url 'first_pages:random_first_page' %}" class="btn btn-outline-primary">Give Me Another</a>
+        </div>
+    </div>
+{% endif %}
+{% endblock %} 
