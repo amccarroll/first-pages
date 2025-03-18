@@ -1,1 +1,1 @@
-web: gunicorn first_pages_project.wsgi:application 
+web: python manage.py migrate && python manage.py fetch_gutenberg --num-books 5 --pages-per-book 5 && gunicorn first_pages_project.wsgi:application 
