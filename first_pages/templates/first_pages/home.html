@@ -4,11 +4,12 @@
 {% block content %}
 <div class="text-center">
     <h1 class="display-4 mb-4">First Pages</h1>
+    <p class="lead mb-4">The book discovery engine</p>
     <div class="book-cover-container mb-4">
         <img src="{% static 'first_pages/images/bookimage.webp' %}" alt="Book Stack" class="img-fluid">
     </div>
-    <p class="lead mb-4">Discover the beginning of amazing stories</p>
-    <a href="{% url 'first_pages:random_first_page' %}" class="btn btn-primary btn-lg">Get Started</a>
+
+    <a href="{% url 'first_pages:random_first_page' %}" class="btn btn-primary btn-lg">Dive In</a>
 </div>
 
 <style>
