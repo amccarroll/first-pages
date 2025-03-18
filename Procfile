@@ -1,0 +1,1 @@
+web: gunicorn first_pages_project.wsgi:application 
